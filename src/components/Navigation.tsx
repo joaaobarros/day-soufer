@@ -9,6 +9,7 @@ const navLinks = [
   { label: "capoeirança", href: "#capoeiranca" },
   { label: "tsuru", href: "#tsuru" },
   { label: "pedagogia", href: "#pedagogia" },
+  { label: "trabalhos", href: "#trabalhos" },
   { label: "contato", href: "#contato" },
 ];
 

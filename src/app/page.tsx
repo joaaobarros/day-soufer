@@ -9,6 +9,8 @@ import Pedagogia from "@/components/Pedagogia";
 import Impacto from "@/components/Impacto";
 import Solar from "@/components/Solar";
 import Galeria from "@/components/Galeria";
+import Trabalhos from "@/components/Trabalhos";
+import Depoimentos from "@/components/Depoimentos";
 import Contato from "@/components/Contato";
 
 export default function Home() {
@@ -29,6 +31,8 @@ export default function Home() {
         <Impacto />
         <Solar />
         <Galeria />
+        <Trabalhos />
+        <Depoimentos />
         <Contato />
       </main>
     </SmoothScroll>
