@@ -282,9 +282,9 @@ export default function Pedagogia() {
         {/* Photo strip */}
         <div className="grid grid-cols-3 gap-2 mb-24 overflow-hidden">
           {[
-            { src: "/images/day-39.png", label: "crianças em cena" },
-            { src: "/images/day-03.png", label: "CCBJ — encontro" },
-            { src: "/images/day-41.png", label: "residência coletiva" },
+            { src: "/images/criancas-estudio.png", label: "crianças em cena" },
+            { src: "/images/ccbj-abraco.png", label: "CCBJ — encontro" },
+            { src: "/images/turma-estudio-02.png", label: "residência coletiva" },
           ].map(({ src, label }, i) => (
             <motion.div
               key={i}

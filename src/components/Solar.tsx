@@ -176,11 +176,11 @@ function SunGraphic() {
 }
 
 const joyPhotos = [
-  { src: "/images/day-08.png", label: "alegria", pos: "object-center" },
-  { src: "/images/day-30.png", label: "rua", pos: "object-center" },
-  { src: "/images/day-44.png", label: "bailarinas", pos: "object-top" },
-  { src: "/images/day-09.png", label: "Marielle", pos: "object-center" },
-  { src: "/images/day-07.png", label: "pôr do sol", pos: "object-center" },
+  { src: "/images/alegria-bicicletas.png", label: "alegria", pos: "object-center" },
+  { src: "/images/candomble-rua.png", label: "rua", pos: "object-center" },
+  { src: "/images/tutus-parede-vermelha.png", label: "bailarinas", pos: "object-top" },
+  { src: "/images/retrato-marielle.png", label: "Marielle", pos: "object-center" },
+  { src: "/images/tutus-por-do-sol.png", label: "pôr do sol", pos: "object-center" },
 ];
 
 export default function Solar() {

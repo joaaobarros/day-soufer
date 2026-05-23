@@ -36,7 +36,7 @@ function TsuruVisual() {
     <div className="relative h-80 md:h-[500px] overflow-hidden">
       {/* Main: porta azul — espaço do ateliê */}
       <Image
-        src="/images/day-28.png"
+        src="/images/porta-azul.png"
         alt="TSURU Ateliê — espaço"
         fill
         className="object-cover object-center"

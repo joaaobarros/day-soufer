@@ -43,7 +43,7 @@ function CapoeirancaPhotos() {
         className="absolute inset-0 overflow-hidden"
       >
         <Image
-          src="/images/day-47.png"
+          src="/images/capoeiranca-praia.png"
           alt="Capoeirança — ao pôr do sol"
           fill
           className="object-cover object-center"
@@ -61,7 +61,7 @@ function CapoeirancaPhotos() {
         className="absolute bottom-6 right-6 w-40 h-48 overflow-hidden border border-[#8B3E2F]/40"
       >
         <Image
-          src="/images/day-23.png"
+          src="/images/capoeiranca-fusca.png"
           alt="Vadiação — capoeirança na rua"
           fill
           className="object-cover object-top"

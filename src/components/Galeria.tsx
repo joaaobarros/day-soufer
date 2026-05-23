@@ -19,7 +19,7 @@ const items = [
     category: "dança",
     title: "Corpo em trânsito",
     desc: "Registro de ensaio — improvisação em solo",
-    src: "/images/day-37.png",
+    src: "/images/ensaio-saia-dourada.png",
     aspect: "tall",
   },
   {
@@ -27,7 +27,7 @@ const items = [
     category: "capoeirança",
     title: "A roda começa",
     desc: "Capoeirança — laboratório de criação",
-    src: "/images/day-47.png",
+    src: "/images/capoeiranca-praia.png",
     aspect: "wide",
   },
   {
@@ -35,7 +35,7 @@ const items = [
     category: "tsuru",
     title: "Linhas e nós",
     desc: "TSURU Ateliê — processo de criação têxtil",
-    src: "/images/day-33.png",
+    src: "/images/porta-azul.png",
     aspect: "square",
   },
   {
@@ -43,7 +43,7 @@ const items = [
     category: "pedagogia",
     title: "Danças em Travessia",
     desc: "Theatro José de Alencar — Dia Internacional da Dança 2026",
-    src: "/images/day-39.png",
+    src: "/images/criancas-estudio.png",
     aspect: "tall",
   },
   {
@@ -51,7 +51,7 @@ const items = [
     category: "dramaturgia",
     title: "YUGO",
     desc: "Dramaturgia — com Daniela Yara Cantillo Castrillón",
-    src: "/images/day-43.png",
+    src: "/images/ensaio-duo-abrace.png",
     aspect: "wide",
   },
   {
@@ -59,7 +59,7 @@ const items = [
     category: "tsuru",
     title: "Dobra",
     desc: "O tsuru — gesto mínimo de criação",
-    src: "/images/day-31.png",
+    src: "/images/verde-sombras-01.png",
     aspect: "square",
   },
   {
@@ -67,7 +67,7 @@ const items = [
     category: "dança",
     title: "ACASEMIA DA TIA DAY",
     desc: "Musculação em Casa e Danças — o humor como prática",
-    src: "/images/day-13.png",
+    src: "/images/movimento-pb-corpo.png",
     aspect: "square",
   },
   {
@@ -75,7 +75,7 @@ const items = [
     category: "pedagogia",
     title: "Vila das Artes",
     desc: "Escola Pública de Dança — formação coletiva",
-    src: "/images/day-04.png",
+    src: "/images/turma-estudio.png",
     aspect: "wide",
   },
   {
@@ -83,7 +83,7 @@ const items = [
     category: "capoeirança",
     title: "Vadiação",
     desc: "Pesquisa — Vadiação como veículo de criação da Capoeirança",
-    src: "/images/day-23.png",
+    src: "/images/capoeiranca-fusca.png",
     aspect: "tall",
   },
 ];

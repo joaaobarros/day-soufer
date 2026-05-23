@@ -174,7 +174,7 @@ export default function Manifesto() {
           {/* Portrait */}
           <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-[#8B3E2F]/40">
             <Image
-              src="/images/day-01.png"
+              src="/images/retrato-principal.png"
               alt="Day Soufer"
               fill
               className="object-cover object-top"

@@ -35,10 +35,10 @@ export default function Hero() {
       <motion.div style={{ scale }} className="absolute inset-0 z-0">
         {/* Photo background */}
         <Image
-          src="/images/day-37.png"
+          src="/images/performance-coroa-dourada.png"
           alt=""
           fill
-          className="object-cover object-[center_15%]"
+          className="object-cover object-center"
           priority
         />
         {/* Dark overlay — preserves dark aesthetic */}
@@ -133,7 +133,7 @@ export default function Hero() {
         style={{ maskImage: "linear-gradient(to right, transparent, black 25%, black 80%, transparent)" }}
       >
         <Image
-          src="/images/day-42.png"
+          src="/images/ensaio-parede-01.png"
           alt="Day Soufer"
           fill
           className="object-cover object-top"
