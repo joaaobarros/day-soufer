@@ -7,15 +7,15 @@ const timelineNodes = [
   {
     year: "1999",
     title: "A primeira roda",
-    subtitle: "EDISCA — Escola de Dança e Integração Social para Criança e Adolescente",
-    body: "Com seis anos de infância ainda no corpo, o chão da EDISCA foi o primeiro mestre. Ali a dança não era performance — era direito, era pertencimento.",
+    subtitle: "EDISCA, Escola de Dança e Integração Social para Criança e Adolescente",
+    body: "Aos 9 anos, o chão da EDISCA foi o primeiro mestre. Ali a dança não era performance. Era pertencimento, era direito.",
     tags: ["ballet clássico", "formação inicial", "periferia"],
     color: "#8B3E2F",
   },
   {
     year: "2000s",
     title: "Formação técnica",
-    subtitle: "Instituto Dragão do Mar / SENAC — Curso Técnico em Dança",
+    subtitle: "Instituto Dragão do Mar / SENAC, Curso Técnico em Dança",
     body: "A técnica entrou pelo corpo sem apagar a ginga. Clássico e popular coexistindo, como fios de cores diferentes no mesmo tecido.",
     tags: ["técnica", "ballet", "contemporâneo"],
     color: "#7C3D1E",
@@ -23,7 +23,7 @@ const timelineNodes = [
   {
     year: "2010s",
     title: "A universidade do corpo",
-    subtitle: "Bacharelado em Dança — Universidade Federal do Ceará",
+    subtitle: "Bacharelado em Dança, Universidade Federal do Ceará",
     body: "A UFC abriu portas para a pesquisa. O corpo virou pergunta. A dança, método. A periferia, epistemologia.",
     tags: ["UFC", "pesquisa", "dramaturgia", "videodança"],
     color: "#B8860B",
@@ -31,15 +31,15 @@ const timelineNodes = [
   {
     year: "2015+",
     title: "Capoeirança nasce",
-    subtitle: "Pesquisa: Vadiação — Veículo de criação da Capoeirança",
-    body: "A capoeira já morava no corpo antes de ter nome. A pesquisa da Capoeirança foi a descoberta de que a ginga e a dança nunca foram mundos separados — foram sempre uma só travessia.",
+    subtitle: "Pesquisa: Vadiação, Veículo de criação da Capoeirança",
+    body: "A capoeira já morava no corpo antes de ter nome. A pesquisa da Capoeirança revelou que a ginga e a dança nunca foram mundos separados. Sempre foram uma só travessia.",
     tags: ["capoeira", "pesquisa cênica", "improviso", "jogo"],
     color: "#8B3E2F",
   },
   {
     year: "2018+",
     title: "Chão público",
-    subtitle: "Vila das Artes · CCBJ — Centro Cultural Bom Jardim",
+    subtitle: "Vila das Artes · CCBJ, Centro Cultural Bom Jardim",
     body: "Ensinar em espaço público é ato político. Cada aula no CCBJ e na Vila das Artes é uma aposta: que a dança pertence a todos os corpos, de todos os territórios.",
     tags: ["pedagogia pública", "CCBJ", "Vila das Artes", "formação coletiva"],
     color: "#7C3D1E",
@@ -47,15 +47,15 @@ const timelineNodes = [
   {
     year: "2020+",
     title: "TSURU nasce das sobras",
-    subtitle: "TSURU Ateliê — transformando linha em coisa-afeto",
-    body: "Os movimentos que sobram depois da aula — as dobras, os fios, os gestos — encontraram forma material no TSURU. Não é uma loja. É uma extensão da dança.",
+    subtitle: "TSURU Ateliê, transformando linha em coisa-afeto",
+    body: "As dobras, os fios, os gestos que sobram depois da aula encontraram forma material no TSURU. Não é uma loja. É uma extensão da dança.",
     tags: ["artesanato", "figurino", "costura", "textura"],
     color: "#B8860B",
   },
   {
     year: "2022+",
     title: "Dramaturgias",
-    subtitle: "YUGO — com Daniela Yara Cantillo Castrillón · NODO_COLETIVO",
+    subtitle: "YUGO, com Daniela Yara Cantillo Castrillón · NODO_COLETIVO",
     body: "Como dramaturgista do YUGO, Day teceu narrativas que exaltam identidade, subjetividade e os afetos de mulheres que resistem à misoginia e ao racismo. A dramaturgia como costura de corpos e histórias.",
     tags: ["YUGO", "dramaturgia", "NODO_COLETIVO", "afro-diaspórico"],
     color: "#8B3E2F",
@@ -63,8 +63,8 @@ const timelineNodes = [
   {
     year: "2024+",
     title: "ACASEMIA DA TIA DAY",
-    subtitle: "Musculação em Casa e Danças — humor como pedagogia",
-    body: "Porque o corpo também ri. A Acasemia é o treino que acontece na vida real — com as limitações reais, o humor real e a força real de quem dança em qualquer espaço.",
+    subtitle: "Musculação em Casa e Danças, humor como pedagogia",
+    body: "Porque o corpo também ri. A Acasemia é o treino que acontece na vida real, com as limitações reais, o humor real e a força real de quem dança em qualquer espaço.",
     tags: ["humor", "cotidiano", "corpo", "musculação"],
     color: "#C4A882",
   },
@@ -218,9 +218,19 @@ export default function Timeline() {
             Um arquivo vivo
           </h2>
           <p className="font-editorial italic text-lg text-[#C4A882]/60 mt-4">
-            não uma linha reta — uma constelação
+            não uma linha reta. uma constelação.
           </p>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-center font-editorial italic text-sm text-[#C4A882]/40 mt-20"
+        >
+          clique em cada ponto para abrir a memória
+        </motion.p>
 
         {/* Timeline */}
         <div className="relative">
@@ -240,15 +250,7 @@ export default function Timeline() {
           </div>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="text-center font-editorial italic text-sm text-[#C4A882]/40 mt-20"
-        >
-          clique em cada ponto para abrir a memória
-        </motion.p>
+        
       </div>
     </section>
   );

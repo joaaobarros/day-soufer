@@ -2,6 +2,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
+import DayCrianca from "@/components/DayCrianca";
+import Ogun from "@/components/Ogun";
 import Timeline from "@/components/Timeline";
 import Capoeiranca from "@/components/Capoeiranca";
 import Tsuru from "@/components/Tsuru";
@@ -24,6 +26,8 @@ export default function Home() {
       <main>
         <Hero />
         <Manifesto />
+        <DayCrianca />
+        <Ogun />
         <Timeline />
         <Capoeiranca />
         <Tsuru />

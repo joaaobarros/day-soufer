@@ -185,6 +185,9 @@ export default function Manifesto() {
             <p className="font-editorial italic text-sm text-[#C4A882]/60 mt-1">
               artista da dança e das encruzas · Fortaleza, Ceará
             </p>
+            <p className="tracking-ritual text-[10px] text-[#8B3E2F]/50 mt-1">
+              Irìn Omu · Filha de Ogun · Candomblé
+            </p>
           </div>
         </motion.div>
       </div>
