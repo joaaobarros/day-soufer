@@ -1,11 +1,23 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const categorias = ["tudo", "espetáculo", "pesquisa", "ensino", "coletivo"];
 
 const trabalhos = [
+  {
+    id: 0,
+    titulo: "Viração",
+    categoria: "espetáculo",
+    ano: "em cartaz",
+    parceria: "criação e performance",
+    desc: "Viração — espetáculo de Day Soufer que gira em torno do corpo em estado de virada, de transformação. Registros audiovisuais e imagens em breve. Acompanhe para mais informações sobre datas e local.",
+    tags: ["espetáculo", "performance", "criação autoral"],
+    destaque: true,
+    imagem: "/images/viracao-elenco.png",
+  },
   {
     id: 1,
     titulo: "YUGO",
@@ -143,11 +155,25 @@ function WorkCard({ trabalho, index }: { trabalho: typeof trabalhos[0]; index: n
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, delay: index * 0.07 }}
-      className={`group border border-white/5 hover:border-white/15 transition-all duration-500 bg-[#080808] cursor-pointer ${
+      className={`group border border-white/5 hover:border-white/15 transition-all duration-500 bg-[#080808] cursor-pointer overflow-hidden ${
         trabalho.destaque ? "md:col-span-2" : ""
       }`}
       onClick={() => setExpanded(!expanded)}
     >
+      {/* Featured image for destaque cards */}
+      {"imagem" in trabalho && trabalho.imagem && (
+        <div className="relative h-56 md:h-72 w-full overflow-hidden">
+          <Image
+            src={trabalho.imagem}
+            alt={trabalho.titulo}
+            fill
+            className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/20 to-transparent" />
+        </div>
+      )}
+
       <div className="p-6 md:p-8">
         {/* Top row */}
         <div className="flex items-start justify-between gap-4 mb-4">

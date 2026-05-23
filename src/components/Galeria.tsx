@@ -51,7 +51,7 @@ const items = [
     category: "dramaturgia",
     title: "YUGO",
     desc: "Dramaturgia — com Daniela Yara Cantillo Castrillón",
-    src: "/images/ensaio-duo-abrace.png",
+    src: "/images/viracao-capa.png",
     aspect: "wide",
   },
   {
