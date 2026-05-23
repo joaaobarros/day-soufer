@@ -66,9 +66,9 @@ export default function DayCrianca() {
         </motion.div>
 
         {/* Main visual: two panels + connecting arrow */}
-        <div className="relative flex flex-col md:flex-row items-stretch gap-6 md:gap-0">
+        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
 
-          {/* ── LEFT: Video clip ── */}
+          {/* LEFT: Video clip */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -348,14 +348,14 @@ export default function DayCrianca() {
             <div className="flex-1 h-px bg-[#8B3E2F]/15" />
           </div>
 
-          {/* ── RIGHT: Current photo ── */}
+          {/* RIGHT: Current photo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full md:w-[42%] flex-shrink-0 flex flex-col"
+            className="relative w-full md:w-[42%] flex-shrink-0"
           >
-            <div className="relative group flex-1 flex flex-col">
+            <div className="relative group">
               {/* Glowing border */}
               <motion.div
                 className="absolute -inset-[1px] rounded-sm pointer-events-none z-10"
@@ -366,9 +366,9 @@ export default function DayCrianca() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
 
-              {/* Expanded portrait, matches full height of left panel including film strips */}
+              {/* Portrait 3/4 — naturally taller than the 16/9 video */}
               <div
-                className="relative overflow-hidden rounded-sm bg-[#0a0805] flex-1 min-h-[300px] md:min-h-0"
+                className="relative overflow-hidden rounded-sm bg-[#0a0805]"
                 style={{ aspectRatio: "3/4" }}
               >
                 <Image
