@@ -7,11 +7,11 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 const principles = [
   {
     word: "Ginga",
-    desc: "O desvio que não foge — é o corpo que pensa antes da mente.",
+    desc: "O desvio que não foge: é o corpo que pensa antes da mente.",
   },
   {
     word: "Vadiação",
-    desc: "Jogo como método. O improviso não como ausência de rigor — mas como seu ápice.",
+    desc: "Jogo como método. O improviso não como ausência de rigor, mas como seu ápice.",
   },
   {
     word: "Circularidade",
@@ -44,7 +44,7 @@ function CapoeirancaPhotos() {
       >
         <Image
           src="/images/capoeiranca-praia.png"
-          alt="Capoeirança — ao pôr do sol"
+          alt="Capoeirança ao pôr do sol"
           fill
           className="object-cover object-center"
         />
@@ -62,7 +62,7 @@ function CapoeirancaPhotos() {
       >
         <Image
           src="/images/capoeiranca-fusca.png"
-          alt="Vadiação — capoeirança na rua"
+          alt="Vadiação, capoeirança na rua"
           fill
           className="object-cover object-top"
         />
@@ -146,7 +146,7 @@ export default function Capoeiranca() {
 
             <p className="text-[#F5F0E8]/60 leading-relaxed mb-6">
               A pesquisa <em>Vadiação: Veículo de criação da Capoeirança</em>{" "}
-              investiga o trabalho cênico entre dançarinos e capoeiristas — um
+              investiga o trabalho cênico entre dançarinos e capoeiristas,
               território limiar onde a ginga é dramaturgia e o jogo é partitura.
             </p>
 
@@ -197,7 +197,7 @@ export default function Capoeiranca() {
           className="mt-20 text-center"
         >
           <p className="font-editorial italic text-xl text-[#C4A882]/50">
-            "o chão também é palco — e o corpo, arquivo"
+            "o chão também é palco. o corpo, arquivo"
           </p>
         </motion.div>
       </div>

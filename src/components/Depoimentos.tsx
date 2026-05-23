@@ -6,7 +6,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 const depoimentos = [
   {
     id: 1,
-    nome: "—",
+    nome: "·",
     relacao: "aluna · Vila das Artes",
     texto:
       "Este espaço está reservado para o depoimento de uma pessoa formada por Day na Vila das Artes. Em breve este registro será preenchido com as palavras de quem viveu a experiência da sua pedagogia.",
@@ -14,7 +14,7 @@ const depoimentos = [
   },
   {
     id: 2,
-    nome: "—",
+    nome: "·",
     relacao: "aluna · CCBJ",
     texto:
       "Este espaço está reservado para o depoimento de uma pessoa do Centro Cultural Bom Jardim. Um relato sobre como a dança mudou sua relação com o próprio corpo e com o seu território.",
@@ -22,15 +22,15 @@ const depoimentos = [
   },
   {
     id: 3,
-    nome: "—",
+    nome: "·",
     relacao: "parceira artística",
     texto:
-      "Este espaço está reservado para o depoimento de uma parceira de criação. Sobre o processo de trabalhar com Day — a escuta, a generosidade, o rigor que não exclui o afeto.",
+      "Este espaço está reservado para o depoimento de uma parceira de criação. Sobre o processo de trabalhar com Day: a escuta, a generosidade, o rigor que não exclui o afeto.",
     placeholder: true,
   },
   {
     id: 4,
-    nome: "—",
+    nome: "·",
     relacao: "pesquisadora · UFC",
     texto:
       "Este espaço está reservado para o depoimento de alguém que compartilhou o campo da pesquisa com Day. Sobre a Capoeirança, sobre a videodança, sobre o que acontece quando a universidade encontra a rua.",
@@ -38,7 +38,7 @@ const depoimentos = [
   },
   {
     id: 5,
-    nome: "—",
+    nome: "·",
     relacao: "aluno(a) · Acasemia da Tia Day",
     texto:
       "Este espaço está reservado para quem viveu a Acasemia. O treino que virou dança. A dança que virou treino. E no meio disso, a descoberta de que o humor também é um método.",
@@ -165,7 +165,7 @@ export default function Depoimentos() {
         >
           <p className="text-sm text-[#C4A882]/50 leading-relaxed">
             <span className="font-display text-[#C4A882]/70">Espaço em construção.</span>{" "}
-            Em breve estes registros serão preenchidos com depoimentos reais — vozes de alunas(os),
+            Em breve estes registros serão preenchidos com depoimentos reais: vozes de alunas(os),
             parceiras(os) artísticas(os) e pesquisadoras(es) que viveram a pedagogia e a prática
             de Day. Se você é uma dessas pessoas,{" "}
             <a

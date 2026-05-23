@@ -66,7 +66,7 @@ export default function DayCrianca() {
         </motion.div>
 
         {/* Main visual: two panels + connecting arrow */}
-        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+        <div className="relative flex flex-col md:flex-row items-stretch gap-6 md:gap-0">
 
           {/* ── LEFT: Video clip ── */}
           <motion.div
@@ -106,7 +106,7 @@ export default function DayCrianca() {
                 <div className="absolute inset-0 pointer-events-none"
                      style={{ background: "radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.55) 100%)" }} />
 
-                {/* Play button — shown before playing */}
+                {/* Play button, shown before playing */}
                 {!videoPlaying && (
                   <motion.button
                     onClick={handlePlay}
@@ -143,7 +143,7 @@ export default function DayCrianca() {
                     className="text-[10px] tracking-[0.2em] text-[#8B3E2F]"
                     style={{ fontFamily: "'Courier New', monospace" }}
                   >
-                    c. 1999 · TV
+                    EDISCA · documentário
                   </span>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function DayCrianca() {
                 className="text-[11px] tracking-[0.18em] text-[#C4A882]/50 uppercase"
                 style={{ fontFamily: "'Courier New', monospace" }}
               >
-                Day Soufer · entrevista na TV, criança
+                Day Soufer · documentário EDISCA, criança
               </span>
               {/* Pointer arrow down */}
               <div className="flex justify-center mt-2">
@@ -193,7 +193,7 @@ export default function DayCrianca() {
           </motion.div>
 
           {/* ── CENTER: Grafismo conector ── */}
-          <div className="hidden md:flex flex-col items-center justify-center flex-1 relative py-4 min-w-[120px]">
+          <div className="hidden md:flex flex-col items-center justify-center flex-1 relative min-w-[120px]">
             <motion.svg
               width="100"
               height="200"
@@ -215,7 +215,7 @@ export default function DayCrianca() {
                 transition={{ delay: 1.0, duration: 0.6 }}
               />
 
-              {/* Outer ring — pulsante */}
+              {/* Outer ring, pulsante */}
               <motion.circle
                 cx="50" cy="100" r="28"
                 stroke="#8B3E2F"
@@ -240,7 +240,7 @@ export default function DayCrianca() {
                 style={{ transformOrigin: "50px 100px" }}
               />
 
-              {/* Solar rays — 8 pontos cardeais */}
+              {/* Solar rays, 8 pontos cardeais */}
               {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
                 const rad = (angle * Math.PI) / 180;
                 const x1 = 50 + 21 * Math.cos(rad);
@@ -327,7 +327,7 @@ export default function DayCrianca() {
             </motion.svg>
           </div>
 
-          {/* Mobile divider — also grafismo */}
+          {/* Mobile divider, also grafismo */}
           <div className="md:hidden flex items-center gap-0 w-full py-2 justify-center">
             <div className="flex-1 h-px bg-[#8B3E2F]/15" />
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="flex-shrink-0">
@@ -353,9 +353,9 @@ export default function DayCrianca() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full md:w-[42%] flex-shrink-0"
+            className="relative w-full md:w-[42%] flex-shrink-0 flex flex-col"
           >
-            <div className="relative group">
+            <div className="relative group flex-1 flex flex-col">
               {/* Glowing border */}
               <motion.div
                 className="absolute -inset-[1px] rounded-sm pointer-events-none z-10"
@@ -366,15 +366,16 @@ export default function DayCrianca() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
 
+              {/* Expanded portrait, matches full height of left panel including film strips */}
               <div
-                className="relative overflow-hidden rounded-sm bg-[#0a0805]"
-                style={{ aspectRatio: "16/9" }}
+                className="relative overflow-hidden rounded-sm bg-[#0a0805] flex-1 min-h-[300px] md:min-h-0"
+                style={{ aspectRatio: "3/4" }}
               >
                 <Image
                   src="/images/day-03.png"
-                  alt="Day Soufer hoje — artista, dançarina e educadora"
+                  alt="Day Soufer hoje, artista, dançarina e educadora"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   style={{ filter: "contrast(1.05) brightness(0.92)" }}
                 />
 
@@ -476,7 +477,7 @@ export default function DayCrianca() {
             className="text-sm text-[#C4A882]/45 leading-relaxed"
             style={{ fontFamily: "Georgia, serif" }}
           >
-            A criança que apareceu na TV carregava, sem saber, tudo que seria.{" "}
+            A criança filmada no documentário da EDISCA carregava, sem saber, tudo que seria.{" "}
             <br className="hidden md:block" />
             O mesmo olhar. A mesma presença. A mesma Day.
           </p>

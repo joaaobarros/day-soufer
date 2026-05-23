@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Day Soufer — dança como travessia",
+  title: "Day Soufer: dança como travessia",
   description:
     "Artista da dança e das encruzas, capoeirista, candomblecista, artesã e criadora do TSURU Ateliê. Fortaleza, Ceará.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dayana Ferreira de Souza" }],
   openGraph: {
-    title: "Day Soufer — dança como travessia",
+    title: "Day Soufer: dança como travessia",
     description:
       "Artista da dança e das encruzas, capoeirista, candomblecista, artesã e criadora do TSURU Ateliê.",
     type: "website",

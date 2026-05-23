@@ -41,7 +41,7 @@ export default function Hero() {
           className="object-cover object-center"
           priority
         />
-        {/* Dark overlay — preserves dark aesthetic */}
+        {/* Dark overlay, preserves dark aesthetic */}
         <div className="absolute inset-0 bg-[#0D0D0D]/78" />
         {/* Deep gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0e08]/50 via-transparent to-[#080808]/80" />
@@ -124,7 +124,7 @@ export default function Hero() {
         </svg>
       </motion.div>
 
-      {/* Editorial portrait — desktop only */}
+      {/* Editorial portrait, desktop only */}
       <motion.div
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
@@ -155,7 +155,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="tracking-ritual text-xs text-[#C4A882]/60 mb-12"
         >
-          Fortaleza, Ceará — artista da dança e das encruzas
+          Fortaleza, Ceará, artista da dança e das encruzas
         </motion.p>
 
         {/* Main name */}

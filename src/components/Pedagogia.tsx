@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 const spaces = [
   {
     name: "Vila das Artes",
-    role: "Professora — Escola Pública de Dança",
+    role: "Professora, Escola Pública de Dança",
     focus: "Dança Clássica · Abordagens Técnicas",
     desc: "Ensino público e gratuito, formação de corpos que não teriam acesso de outra forma. A Vila das Artes como território de pertencimento artístico.",
     color: "#8B3E2F",
@@ -58,7 +58,7 @@ const approaches = [
   },
   {
     label: "Virtual como campo",
-    text: "Pesquisa 'Sensibilizar e Acompanhar': pedagogia da dança em contexto virtual — presença mesmo à distância.",
+    text: "Pesquisa 'Sensibilizar e Acompanhar': pedagogia da dança em contexto virtual, presença mesmo à distância.",
   },
 ];
 
@@ -247,7 +247,7 @@ export default function Pedagogia() {
             <span className="text-gradient-terra">Corpos que aprendem.</span>
           </h2>
           <p className="font-editorial italic text-lg text-[#C4A882]/60 max-w-xl mt-4">
-            "o chão também ensina — há movimentos que começam antes do corpo"
+            "o chão também ensina: há movimentos que começam antes do corpo"
           </p>
         </motion.div>
 
@@ -283,7 +283,7 @@ export default function Pedagogia() {
         <div className="grid grid-cols-3 gap-2 mb-24 overflow-hidden">
           {[
             { src: "/images/criancas-estudio.png", label: "crianças em cena" },
-            { src: "/images/ccbj-abraco.png", label: "CCBJ — encontro" },
+            { src: "/images/ccbj-abraco.png", label: "CCBJ: encontro" },
             { src: "/images/turma-estudio-02.png", label: "residência coletiva" },
           ].map(({ src, label }, i) => (
             <motion.div

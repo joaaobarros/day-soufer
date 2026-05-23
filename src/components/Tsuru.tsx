@@ -9,7 +9,7 @@ const objects = [
     name: "Fio que dobra",
     material: "linho · algodão cru",
     desc: "A linha que costurou o figurino de ensaio. Que segurou o hem do saiote. Que sobrou e virou objeto.",
-    symbol: "—",
+    symbol: "-",
   },
   {
     name: "Pano da gira",
@@ -26,7 +26,7 @@ const objects = [
   {
     name: "Dobraduras",
     material: "papel · tecido · tempo",
-    desc: "O tsuru, o pássaro. A dobradura como gesto mínimo de criação — que todo corpo conhece.",
+    desc: "O tsuru, o pássaro. A dobradura como gesto mínimo de criação, que todo corpo conhece.",
     symbol: "△",
   },
 ];
@@ -34,10 +34,10 @@ const objects = [
 function TsuruVisual() {
   return (
     <div className="relative h-80 md:h-[500px] overflow-hidden">
-      {/* Main: porta azul — espaço do ateliê */}
+      {/* Main: porta azul, espaço do ateliê */}
       <Image
         src="/images/porta-azul.png"
-        alt="TSURU Ateliê — espaço"
+        alt="TSURU Ateliê, espaço"
         fill
         className="object-cover object-center"
       />
@@ -145,7 +145,7 @@ export default function Tsuru() {
               </p>
               <p className="text-[#F5F0E8]/70 leading-relaxed">
                 Alguns viram tecido. Outros viram objeto. Outros seguem no
-                corpo, sem nome ainda — esperando a matéria certa para se
+                corpo, sem nome ainda, esperando a matéria certa para se
                 manifestar.
               </p>
               <p className="text-[#F5F0E8]/60 leading-relaxed">
@@ -157,7 +157,7 @@ export default function Tsuru() {
 
             <blockquote className="border-l-2 border-[#B8860B] pl-6 space-y-2">
               <p className="font-editorial italic text-lg text-[#C4A882]">
-                "O tsuru — o pássaro de papel dobrado — nasce de um único gesto
+                "O tsuru, o pássaro de papel dobrado, nasce de um único gesto
                 simples, repetido com atenção. Como uma sequência de dança. Como
                 uma reza."
               </p>

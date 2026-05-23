@@ -40,7 +40,7 @@ const services = [
     tag: "formativo",
   },
   {
-    title: "TSURU — figurinos e objetos",
+    title: "TSURU: figurinos e objetos",
     desc: "Criação de figurinos, peças têxteis e objetos-afeto para projetos artísticos.",
     tag: "ateliê",
   },

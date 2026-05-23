@@ -60,7 +60,7 @@ export default function Ogun() {
       ref={sectionRef}
       className="relative py-32 md:py-48 px-6 md:px-12 bg-[#0A0608] overflow-hidden"
     >
-      {/* Iron texture — diagonal lines */}
+      {/* Iron texture, diagonal lines */}
       <div className="absolute inset-0 opacity-[0.025] pointer-events-none">
         <svg width="100%" height="100%">
           <defs>
@@ -110,7 +110,7 @@ export default function Ogun() {
 
         {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* Left — image + title block */}
+          {/* Left: image + title block */}
           <div>
             {/* Title */}
             <motion.div
@@ -127,7 +127,7 @@ export default function Ogun() {
               </p>
             </motion.div>
 
-            {/* Illustration — woman with machete */}
+            {/* Illustration, woman with machete */}
             <motion.div
               ref={imageRef}
               initial={{ opacity: 0, scale: 0.96 }}
@@ -137,7 +137,7 @@ export default function Ogun() {
             >
               <Image
                 src="/images/ilustracao-espada.png"
-                alt="Ilustração — mulher com facão, Ogun"
+                alt="Ilustração, mulher com facão, Ogun"
                 fill
                 className="object-cover object-center"
               />
@@ -153,7 +153,7 @@ export default function Ogun() {
               </div>
             </motion.div>
 
-            {/* Blue door — textural detail */}
+            {/* Blue door, textural detail */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -172,7 +172,7 @@ export default function Ogun() {
             </motion.div>
           </div>
 
-          {/* Right — text content */}
+          {/* Right: text content */}
           <div className="flex flex-col gap-12">
             {/* Lead paragraph */}
             <motion.div
@@ -211,7 +211,7 @@ export default function Ogun() {
                 viewBox="0 0 24 24"
                 className="flex-shrink-0 text-[#8B3E2F]/40"
               >
-                {/* Simple iron/cross motif — Ogun's symbol */}
+                {/* Simple iron/cross motif, Ogun's symbol */}
                 <line
                   x1="12"
                   y1="2"
@@ -265,7 +265,7 @@ export default function Ogun() {
               <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-[#8B3E2F]/30">
                 <Image
                   src="/images/retrato-elekes.png"
-                  alt="Day Soufer — Irìn Omu"
+                  alt="Day Soufer, Irìn Omu"
                   fill
                   className="object-cover object-top"
                 />

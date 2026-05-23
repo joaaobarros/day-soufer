@@ -15,7 +15,7 @@ const manifestoParts = [
     color: "terra",
   },
   {
-    text: "Cada movimento carrega uma memória que não coube em nenhum livro. Que passou de pele em pele, de chão em chão, de ginga em ginga — antes mesmo de ter nome.",
+    text: "Cada movimento carrega uma memória que não coube em nenhum livro. Que passou de pele em pele, de chão em chão, de ginga em ginga, antes mesmo de ter nome.",
     size: "normal",
   },
   {
@@ -24,7 +24,7 @@ const manifestoParts = [
     color: "dourado",
   },
   {
-    text: "Ela começa no barro, no fio, na roda, no terreiro. Começa quando o corpo ainda não sabe que está dançando — mas já está.",
+    text: "Ela começa no barro, no fio, na roda, no terreiro. Começa quando o corpo ainda não sabe que está dançando, mas já está.",
     size: "normal",
   },
   {
@@ -42,7 +42,7 @@ const manifestoParts = [
     color: "dourado",
   },
   {
-    text: "E o TSURU nasceu do que sobrou depois da aula — das linhas, dos tecidos, dos afetos que não cabiam em palavras, mas encontravam forma na matéria.",
+    text: "E o TSURU nasceu do que sobrou depois da aula: das linhas, dos tecidos, dos afetos que não cabiam em palavras, mas encontravam forma na matéria.",
     size: "normal",
   },
 ];
