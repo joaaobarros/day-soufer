@@ -94,8 +94,8 @@ export default function DayCrianca() {
                    style={{ aspectRatio: "16/9" }}>
                 <video
                   ref={videoRef}
-                  src="/video/day_crianca_entrevista.mp4"
-                  poster="/video/day_crianca_poster.jpg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/video/day_crianca_entrevista.mp4`}
+                  poster={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/video/day_crianca_poster.jpg`}
                   className="w-full h-full object-cover"
                   style={{ filter: "sepia(30%) contrast(1.1) brightness(0.95)" }}
                   onEnded={() => setVideoPlaying(false)}
