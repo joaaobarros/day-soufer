@@ -7,6 +7,7 @@ import Capoeiranca from "@/components/Capoeiranca";
 import Tsuru from "@/components/Tsuru";
 import Pedagogia from "@/components/Pedagogia";
 import Impacto from "@/components/Impacto";
+import Solar from "@/components/Solar";
 import Galeria from "@/components/Galeria";
 import Contato from "@/components/Contato";
 
@@ -26,6 +27,7 @@ export default function Home() {
         <Tsuru />
         <Pedagogia />
         <Impacto />
+        <Solar />
         <Galeria />
         <Contato />
       </main>

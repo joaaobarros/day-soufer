@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 const objects = [
@@ -30,63 +31,49 @@ const objects = [
   },
 ];
 
-function ThreadAnimation() {
+function TsuruVisual() {
   return (
-    <svg
-      viewBox="0 0 400 500"
-      className="w-full h-full opacity-80"
-      preserveAspectRatio="xMidYMid meet"
-    >
-      {/* Main thread path */}
-      <motion.path
-        d="M 200 20 C 100 80, 300 160, 200 240 C 100 320, 300 400, 200 480"
-        stroke="#C4A882"
-        strokeWidth="0.8"
-        fill="none"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
+    <div className="relative h-80 md:h-[500px] overflow-hidden">
+      {/* Main: porta azul — espaço do ateliê */}
+      <Image
+        src="/images/day-28.png"
+        alt="TSURU Ateliê — espaço"
+        fill
+        className="object-cover object-center"
       />
-      {/* Secondary thread */}
-      <motion.path
-        d="M 150 40 C 280 100, 120 180, 250 260 C 130 340, 270 420, 160 480"
-        stroke="#8B3E2F"
-        strokeWidth="0.4"
-        fill="none"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 0.6 }}
-        transition={{ duration: 4, delay: 0.5, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.5 }}
-      />
-      {/* Third thread */}
-      <motion.path
-        d="M 260 60 C 140 140, 300 220, 160 300 C 290 380, 150 440, 240 500"
-        stroke="#B8860B"
-        strokeWidth="0.3"
-        fill="none"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 0.4 }}
-        transition={{ duration: 3.5, delay: 1, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.8 }}
-      />
-      {/* Node dots */}
-      {[
-        { cx: 200, cy: 20 },
-        { cx: 200, cy: 240 },
-        { cx: 200, cy: 480 },
-        { cx: 150, cy: 40 },
-        { cx: 260, cy: 60 },
-      ].map((dot, i) => (
-        <motion.circle
-          key={i}
-          cx={dot.cx}
-          cy={dot.cy}
-          r="2"
-          fill="#C4A882"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: [0, 1, 0.5], scale: [0, 1.5, 1] }}
-          transition={{ duration: 0.5, delay: i * 0.4 + 0.8, repeat: Infinity, repeatDelay: 4 }}
-        />
-      ))}
-    </svg>
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0705]/60 via-transparent to-[#0A0705]/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0705]/40" />
+
+      {/* Decorative thread SVG over photo */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <svg viewBox="0 0 400 500" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
+          <motion.path
+            d="M 200 20 C 100 80, 300 160, 200 240 C 100 320, 300 400, 200 480"
+            stroke="#C4A882"
+            strokeWidth="0.8"
+            fill="none"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
+          />
+          <motion.path
+            d="M 150 40 C 280 100, 120 180, 250 260 C 130 340, 270 420, 160 480"
+            stroke="#8B3E2F"
+            strokeWidth="0.4"
+            fill="none"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 4, delay: 0.5, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.5 }}
+          />
+        </svg>
+      </div>
+
+      {/* Label */}
+      <div className="absolute bottom-5 left-5">
+        <span className="tracking-ritual text-[10px] text-[#B8860B]/70">linha · corpo · matéria</span>
+      </div>
+    </div>
   );
 }
 
@@ -133,7 +120,7 @@ export default function Tsuru() {
 
         {/* Main grid */}
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start mb-24">
-          {/* Left: Thread animation */}
+          {/* Left: Tsuru visual */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -141,7 +128,7 @@ export default function Tsuru() {
             transition={{ duration: 1.5 }}
             className="h-80 md:h-[500px] relative"
           >
-            <ThreadAnimation />
+            <TsuruVisual />
           </motion.div>
 
           {/* Right: Text */}

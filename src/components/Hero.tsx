@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const words = ["corpo", "travessia", "ancestralidade", "movimento", "rito"];
@@ -32,8 +33,18 @@ export default function Hero() {
     >
       {/* Animated background layers */}
       <motion.div style={{ scale }} className="absolute inset-0 z-0">
+        {/* Photo background */}
+        <Image
+          src="/images/day-37.png"
+          alt=""
+          fill
+          className="object-cover object-[center_15%]"
+          priority
+        />
+        {/* Dark overlay — preserves dark aesthetic */}
+        <div className="absolute inset-0 bg-[#0D0D0D]/78" />
         {/* Deep gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0e08] via-[#0D0D0D] to-[#080808]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0e08]/50 via-transparent to-[#080808]/80" />
 
         {/* Radial glow terracota */}
         <motion.div
@@ -113,10 +124,29 @@ export default function Hero() {
         </svg>
       </motion.div>
 
+      {/* Editorial portrait — desktop only */}
+      <motion.div
+        initial={{ opacity: 0, x: 80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute right-0 bottom-0 top-0 w-[38vw] overflow-hidden hidden lg:block pointer-events-none"
+        style={{ maskImage: "linear-gradient(to right, transparent, black 25%, black 80%, transparent)" }}
+      >
+        <Image
+          src="/images/day-42.png"
+          alt="Day Soufer"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0D0D0D]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 via-transparent to-transparent" />
+      </motion.div>
+
       {/* Content */}
       <motion.div
         style={{ opacity, y }}
-        className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        className="relative z-10 text-center px-6 max-w-5xl mx-auto lg:mr-[38vw] lg:ml-0 lg:text-left"
       >
         {/* Eyebrow */}
         <motion.p
@@ -143,7 +173,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.4 }}
-          className="h-14 flex items-center justify-center mb-12 overflow-hidden"
+          className="h-14 flex items-center lg:justify-start justify-center mb-12 overflow-hidden"
         >
           <span className="tracking-ritual text-xs text-[#C4A882]/50 mr-4">
             dança como
@@ -166,7 +196,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.6 }}
-          className="font-editorial text-lg text-[#F5F0E8]/50 max-w-lg mx-auto leading-relaxed italic"
+          className="font-editorial text-lg text-[#F5F0E8]/50 max-w-lg mx-auto lg:mx-0 leading-relaxed italic"
         >
           capoeirista · candomblecista · artesã · professora · pesquisadora
         </motion.p>
@@ -202,6 +232,41 @@ export default function Hero() {
           <line x1="0" y1="30" x2="30" y2="0" stroke="#8B3E2F" strokeWidth="0.5" />
         </svg>
       </div>
+
+      {/* Botanical: palm frond bottom-left */}
+      <div className="absolute bottom-0 left-0 opacity-[0.07] pointer-events-none hidden md:block">
+        <svg viewBox="0 0 200 340" width="200" height="340">
+          <path d="M 100 340 C 60 270, 10 190, 5 100 C 30 130, 60 180, 100 340Z" fill="#C4A882" />
+          <path d="M 100 340 C 130 260, 170 180, 190 90 C 165 120, 135 180, 100 340Z" fill="#8B3E2F" />
+          <path d="M 100 340 C 80 280, 40 210, 20 130 C 50 155, 80 220, 100 340Z" fill="#B8860B" opacity="0.6" />
+          <path d="M 100 340 C 120 280, 155 210, 175 130 C 150 155, 120 220, 100 340Z" fill="#C4A882" opacity="0.5" />
+        </svg>
+      </div>
+
+      {/* Graphic: minimal sun top-left */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+        className="absolute top-16 left-16 opacity-[0.08] pointer-events-none hidden lg:block"
+      >
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          {Array.from({ length: 12 }).map((_, i) => {
+            const angle = (i * 30 * Math.PI) / 180;
+            return (
+              <line
+                key={i}
+                x1={50 + 28 * Math.cos(angle)}
+                y1={50 + 28 * Math.sin(angle)}
+                x2={50 + 45 * Math.cos(angle)}
+                y2={50 + 45 * Math.sin(angle)}
+                stroke="#B8860B"
+                strokeWidth={i % 3 === 0 ? "1.5" : "0.6"}
+              />
+            );
+          })}
+          <circle cx="50" cy="50" r="22" stroke="#B8860B" strokeWidth="0.5" fill="rgba(184,134,11,0.15)" />
+        </svg>
+      </motion.div>
     </section>
   );
 }

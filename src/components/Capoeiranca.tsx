@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 const principles = [
@@ -30,96 +31,48 @@ const principles = [
   },
 ];
 
-function CircleAnimation() {
+function CapoeirancaPhotos() {
   return (
-    <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-      {/* Outer rotating ring */}
+    <div className="relative h-[480px] md:h-[560px]">
+      {/* Main: handstand at sunset beach */}
       <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0"
+        initial={{ opacity: 0, scale: 0.96 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 1.2 }}
+        className="absolute inset-0 overflow-hidden"
       >
-        <svg viewBox="0 0 320 320" className="w-full h-full">
-          <circle
-            cx="160"
-            cy="160"
-            r="150"
-            stroke="#8B3E2F"
-            strokeWidth="0.5"
-            fill="none"
-            strokeDasharray="4 8"
-          />
-        </svg>
+        <Image
+          src="/images/day-47.png"
+          alt="Capoeirança — ao pôr do sol"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/40 via-transparent to-transparent" />
       </motion.div>
 
-      {/* Inner counter-rotating ring */}
+      {/* Inset: handstand VW Bug */}
       <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.9, delay: 0.4 }}
+        className="absolute bottom-6 right-6 w-40 h-48 overflow-hidden border border-[#8B3E2F]/40"
       >
-        <svg viewBox="0 0 280 280" className="w-full h-full">
-          <circle
-            cx="140"
-            cy="140"
-            r="128"
-            stroke="#C4A882"
-            strokeWidth="0.3"
-            fill="none"
-            strokeDasharray="2 12"
-          />
-        </svg>
+        <Image
+          src="/images/day-23.png"
+          alt="Vadiação — capoeirança na rua"
+          fill
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-[#8B3E2F]/10" />
       </motion.div>
 
-      {/* Center pulse */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <motion.div
-          animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="relative"
-        >
-          <div className="w-24 h-24 rounded-full border border-[#8B3E2F]/40 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full border border-[#C4A882]/30 flex items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="w-8 h-8"
-              >
-                <svg viewBox="0 0 32 32" className="w-full h-full">
-                  <path
-                    d="M16 2 L30 28 L2 28 Z"
-                    stroke="#B8860B"
-                    strokeWidth="0.5"
-                    fill="none"
-                    opacity="0.6"
-                  />
-                </svg>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
+      {/* Decorative label */}
+      <div className="absolute bottom-6 left-6">
+        <span className="tracking-ritual text-[10px] text-[#8B3E2F]/70">corpo em jogo</span>
       </div>
-
-      {/* Ginga lines emanating */}
-      {[0, 60, 120, 180, 240, 300].map((angle, i) => (
-        <motion.div
-          key={i}
-          className="absolute inset-0 flex items-center justify-center"
-          style={{ rotate: angle }}
-        >
-          <motion.div
-            animate={{ scaleY: [0.5, 1, 0.5], opacity: [0.2, 0.5, 0.2] }}
-            transition={{
-              duration: 2 + i * 0.3,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.2,
-            }}
-            className="w-px bg-gradient-to-t from-transparent via-[#8B3E2F]/30 to-transparent"
-            style={{ height: "40%" }}
-          />
-        </motion.div>
-      ))}
     </div>
   );
 }
@@ -203,14 +156,14 @@ export default function Capoeiranca() {
             </p>
           </motion.div>
 
-          {/* Right: circle animation */}
+          {/* Right: photos */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1 }}
           >
-            <CircleAnimation />
+            <CapoeirancaPhotos />
           </motion.div>
         </div>
 

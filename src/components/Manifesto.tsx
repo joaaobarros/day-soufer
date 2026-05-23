@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 const manifestoParts = [
@@ -170,6 +171,15 @@ export default function Manifesto() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-20 pt-16 border-t border-[#8B3E2F]/20 flex items-center gap-6"
         >
+          {/* Portrait */}
+          <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-[#8B3E2F]/40">
+            <Image
+              src="/images/day-01.png"
+              alt="Day Soufer"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
           <div>
             <p className="font-display text-xl text-[#F5F0E8]">Day Soufer</p>
             <p className="font-editorial italic text-sm text-[#C4A882]/60 mt-1">
