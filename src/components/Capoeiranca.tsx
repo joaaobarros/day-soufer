@@ -44,7 +44,7 @@ function CapoeirancaPhotos() {
       >
         <Image
           src="/images/capoeiranca-praia.png"
-          alt="Capoeirança ao pôr do sol"
+          alt="Day Soufer em posição de capoeira na praia ao pôr do sol: corpo em ginga, silhueta contra o céu alaranjado, força e leveza em equilíbrio"
           fill
           className="object-cover object-center"
         />
@@ -62,7 +62,7 @@ function CapoeirancaPhotos() {
       >
         <Image
           src="/images/capoeiranca-fusca.png"
-          alt="Vadiação, capoeirança na rua"
+          alt="Vadiação da Capoeirança em contexto urbano: corpo em movimento de capoeira ao lado de um fusca, a rua como espaço de criação e jogo"
           fill
           className="object-cover object-top"
         />

@@ -100,6 +100,8 @@ export default function DayCrianca() {
                   style={{ filter: "sepia(30%) contrast(1.1) brightness(0.95)" }}
                   onEnded={() => setVideoPlaying(false)}
                   playsInline
+                  aria-label="Documentário EDISCA: Day Soufer criança, filmada pela Escola de Dança e Integração Social para Criança e Adolescente em Fortaleza. Registro de sua formação inicial em dança, aos 9 anos."
+                  title="Day Soufer criança — Documentário EDISCA"
                 />
 
                 {/* Vignette overlay */}
@@ -113,7 +115,7 @@ export default function DayCrianca() {
                     whileHover={{ scale: 1.08 }}
                     whileTap={{ scale: 0.95 }}
                     className="absolute inset-0 flex flex-col items-center justify-center gap-3 group/play"
-                    aria-label="Reproduzir vídeo"
+                    aria-label="Reproduzir documentário: Day Soufer criança, registrada no documentário da EDISCA — Escola de Dança e Integração Social"
                   >
                     {/* Pulsing ring */}
                     <span className="relative flex items-center justify-center">
@@ -123,6 +125,7 @@ export default function DayCrianca() {
                           className="w-5 h-5 text-[#F5F0E8] ml-0.5"
                           viewBox="0 0 24 24"
                           fill="currentColor"
+                          aria-hidden="true"
                         >
                           <path d="M8 5v14l11-7z" />
                         </svg>
@@ -173,12 +176,12 @@ export default function DayCrianca() {
                 Day Soufer · documentário EDISCA, criança
               </span>
               {/* Pointer arrow down */}
-              <div className="flex justify-center mt-2">
+              <div className="flex justify-center mt-2" aria-hidden="true">
                 <motion.div
                   animate={{ y: [0, 4, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true">
                     <path d="M8 0 L8 16 M2 10 L8 18 L14 10" stroke="#8B3E2F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </motion.div>
@@ -203,6 +206,7 @@ export default function DayCrianca() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.9, duration: 0.6 }}
+              aria-hidden="true"
             >
               {/* Top vertical line */}
               <motion.line
@@ -328,9 +332,9 @@ export default function DayCrianca() {
           </div>
 
           {/* Mobile divider, also grafismo */}
-          <div className="md:hidden flex items-center gap-0 w-full py-2 justify-center">
+          <div className="md:hidden flex items-center gap-0 w-full py-2 justify-center" aria-hidden="true">
             <div className="flex-1 h-px bg-[#8B3E2F]/15" />
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="flex-shrink-0">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="flex-shrink-0" aria-hidden="true">
               <circle cx="20" cy="20" r="10" stroke="#8B3E2F" strokeWidth="0.6" fill="none" opacity="0.4" />
               <circle cx="20" cy="20" r="2" fill="#8B3E2F" opacity="0.7" />
               {[0, 90, 180, 270].map((a) => {
@@ -413,7 +417,7 @@ export default function DayCrianca() {
               className="mt-4 text-center"
             >
               {/* Pointer arrow down */}
-              <div className="flex justify-center mb-2">
+              <div className="flex justify-center mb-2" aria-hidden="true">
                 <motion.div
                   animate={{ y: [0, 4, 0] }}
                   transition={{
@@ -423,7 +427,7 @@ export default function DayCrianca() {
                     delay: 0.5,
                   }}
                 >
-                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true">
                     <path
                       d="M8 0 L8 16 M2 10 L8 18 L14 10"
                       stroke="#C4A882"
@@ -459,7 +463,7 @@ export default function DayCrianca() {
         >
           <div className="flex items-center gap-4 justify-center mb-6">
             <div className="w-12 h-px bg-[#8B3E2F]/40" />
-            <svg width="12" height="12" viewBox="0 0 12 12">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
               <circle cx="6" cy="6" r="1.5" fill="#8B3E2F" opacity="0.6" />
               <circle cx="6" cy="6" r="4" stroke="#8B3E2F" strokeWidth="0.5" fill="none" opacity="0.3" />
             </svg>

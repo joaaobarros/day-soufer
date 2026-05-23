@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Photo background */}
         <Image
           src="/images/performance-coroa-dourada.png"
-          alt=""
+          alt="Day Soufer em performance usando coroa dourada, luz dramática sobre o corpo em movimento"
           fill
           className="object-cover object-center"
           priority
@@ -77,6 +77,7 @@ export default function Hero() {
 
         {/* Geometric lines - threads */}
         <svg
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full opacity-[0.06]"
           viewBox="0 0 1440 900"
           preserveAspectRatio="xMidYMid slice"
@@ -134,7 +135,7 @@ export default function Hero() {
       >
         <Image
           src="/images/ensaio-parede-01.png"
-          alt="Day Soufer"
+          alt="Day Soufer em ensaio fotográfico, retrato editorial em preto e branco junto a parede, olhar direto para a câmera"
           fill
           className="object-cover object-top"
           priority
@@ -220,22 +221,22 @@ export default function Hero() {
       </motion.div>
 
       {/* Decorative corner threads */}
-      <div className="absolute top-8 left-8 opacity-20">
-        <svg width="60" height="60" viewBox="0 0 60 60">
+      <div className="absolute top-8 left-8 opacity-20" aria-hidden="true">
+        <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
           <line x1="0" y1="60" x2="60" y2="0" stroke="#C4A882" strokeWidth="0.5" />
           <line x1="0" y1="30" x2="30" y2="0" stroke="#8B3E2F" strokeWidth="0.5" />
         </svg>
       </div>
-      <div className="absolute bottom-8 right-8 opacity-20 rotate-180">
-        <svg width="60" height="60" viewBox="0 0 60 60">
+      <div className="absolute bottom-8 right-8 opacity-20 rotate-180" aria-hidden="true">
+        <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
           <line x1="0" y1="60" x2="60" y2="0" stroke="#C4A882" strokeWidth="0.5" />
           <line x1="0" y1="30" x2="30" y2="0" stroke="#8B3E2F" strokeWidth="0.5" />
         </svg>
       </div>
 
       {/* Botanical: palm frond bottom-left */}
-      <div className="absolute bottom-0 left-0 opacity-[0.07] pointer-events-none hidden md:block">
-        <svg viewBox="0 0 200 340" width="200" height="340">
+      <div className="absolute bottom-0 left-0 opacity-[0.07] pointer-events-none hidden md:block" aria-hidden="true">
+        <svg viewBox="0 0 200 340" width="200" height="340" aria-hidden="true">
           <path d="M 100 340 C 60 270, 10 190, 5 100 C 30 130, 60 180, 100 340Z" fill="#C4A882" />
           <path d="M 100 340 C 130 260, 170 180, 190 90 C 165 120, 135 180, 100 340Z" fill="#8B3E2F" />
           <path d="M 100 340 C 80 280, 40 210, 20 130 C 50 155, 80 220, 100 340Z" fill="#B8860B" opacity="0.6" />
@@ -245,11 +246,12 @@ export default function Hero() {
 
       {/* Graphic: minimal sun top-left */}
       <motion.div
+        aria-hidden="true"
         animate={{ rotate: 360 }}
         transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
         className="absolute top-16 left-16 opacity-[0.08] pointer-events-none hidden lg:block"
       >
-        <svg viewBox="0 0 100 100" width="100" height="100">
+        <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true">
           {Array.from({ length: 12 }).map((_, i) => {
             const angle = (i * 30 * Math.PI) / 180;
             return (

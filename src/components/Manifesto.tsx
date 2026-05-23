@@ -99,8 +99,8 @@ export default function Manifesto() {
       className="relative py-32 md:py-48 px-6 md:px-12 bg-[#0D0D0D] overflow-hidden"
     >
       {/* Background ornament */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
-        <svg width="600" height="600" viewBox="0 0 600 600">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none" aria-hidden="true">
+        <svg width="600" height="600" viewBox="0 0 600 600" aria-hidden="true">
           <circle
             cx="300"
             cy="300"
@@ -175,7 +175,7 @@ export default function Manifesto() {
           <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-[#8B3E2F]/40">
             <Image
               src="/images/retrato-principal.png"
-              alt="Day Soufer"
+              alt="Retrato circular de Day Soufer, assinatura do manifesto: artista da dança, Fortaleza, Ceará"
               fill
               className="object-cover object-top"
             />

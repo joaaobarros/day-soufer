@@ -37,7 +37,7 @@ function TsuruVisual() {
       {/* Main: porta azul, espaço do ateliê */}
       <Image
         src="/images/porta-azul.png"
-        alt="TSURU Ateliê, espaço"
+        alt="Porta azul do espaço TSURU Ateliê: entrada do lugar onde linha, costura e dança se encontram sem hierarquia"
         fill
         className="object-cover object-center"
       />
@@ -46,8 +46,8 @@ function TsuruVisual() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0705]/40" />
 
       {/* Decorative thread SVG over photo */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <svg viewBox="0 0 400 500" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
+      <div className="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 400 500" className="w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <motion.path
             d="M 200 20 C 100 80, 300 160, 200 240 C 100 320, 300 400, 200 480"
             stroke="#C4A882"

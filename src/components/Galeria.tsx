@@ -119,7 +119,7 @@ function GalleryCard({
       {/* Real photo */}
       <Image
         src={item.src}
-        alt={item.title}
+        alt={`${item.title} — ${item.desc}`}
         fill
         className="object-cover transition-transform duration-700"
         style={{ transform: hovered ? "scale(1.06)" : "scale(1)" }}

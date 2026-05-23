@@ -165,7 +165,7 @@ function WorkCard({ trabalho, index }: { trabalho: typeof trabalhos[0]; index: n
         <div className="relative h-56 md:h-72 w-full overflow-hidden">
           <Image
             src={trabalho.imagem}
-            alt={trabalho.titulo}
+            alt={`${trabalho.titulo} (${trabalho.ano}) — ${trabalho.parceria}`}
             fill
             className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
           />
@@ -272,8 +272,8 @@ export default function Trabalhos() {
       style={{ background: "linear-gradient(180deg, #0D0D0D 0%, #08070A 60%, #0D0D0D 100%)" }}
     >
       {/* Background ornament */}
-      <div className="absolute right-0 top-0 opacity-[0.03] pointer-events-none">
-        <svg width="500" height="500" viewBox="0 0 500 500">
+      <div className="absolute right-0 top-0 opacity-[0.03] pointer-events-none" aria-hidden="true">
+        <svg width="500" height="500" viewBox="0 0 500 500" aria-hidden="true">
           {Array.from({ length: 6 }).map((_, i) => (
             <circle
               key={i}

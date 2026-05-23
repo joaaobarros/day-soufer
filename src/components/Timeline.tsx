@@ -178,8 +178,8 @@ export default function Timeline() {
       className="relative py-32 md:py-48 px-6 md:px-12 bg-[#080808] overflow-hidden"
     >
       {/* Background texture */}
-      <div className="absolute inset-0 opacity-[0.025] pointer-events-none">
-        <svg width="100%" height="100%">
+      <div className="absolute inset-0 opacity-[0.025] pointer-events-none" aria-hidden="true">
+        <svg width="100%" height="100%" aria-hidden="true">
           <defs>
             <pattern
               id="grid"

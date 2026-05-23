@@ -89,7 +89,17 @@ function RadialChart() {
     .join(" ");
 
   return (
-    <svg viewBox="0 0 320 320" className="w-full max-w-sm mx-auto">
+    <svg
+      viewBox="0 0 320 320"
+      className="w-full max-w-sm mx-auto"
+      role="img"
+      aria-labelledby="radar-title"
+      aria-describedby="radar-desc"
+    >
+      <title id="radar-title">Constelação pedagógica de Day Soufer</title>
+      <desc id="radar-desc">
+        Gráfico radar hexagonal com seis dimensões da pedagogia de Day Soufer, todas com valores elevados: escuta (85%), improviso (75%), coletividade (90%), pertencimento (70%), autonomia (80%) e memória corporal (85%). O polígono preenchido em terracota mostra a ênfase equilibrada em todas as dimensões.
+      </desc>
       {/* Background rings */}
       {[25, 50, 75, 100].map((r) => (
         <circle
@@ -203,8 +213,8 @@ export default function Pedagogia() {
       className="relative py-32 md:py-48 bg-[#0D0D0D] overflow-hidden"
     >
       {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <svg width="100%" height="100%">
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" aria-hidden="true">
+        <svg width="100%" height="100%" aria-hidden="true">
           <defs>
             <pattern
               id="diag"
@@ -282,10 +292,22 @@ export default function Pedagogia() {
         {/* Photo strip */}
         <div className="grid grid-cols-3 gap-2 mb-24 overflow-hidden">
           {[
-            { src: "/images/criancas-estudio.png", label: "crianças em cena" },
-            { src: "/images/ccbj-abraco.png", label: "CCBJ: encontro" },
-            { src: "/images/turma-estudio-02.png", label: "residência coletiva" },
-          ].map(({ src, label }, i) => (
+            {
+              src: "/images/criancas-estudio.png",
+              label: "crianças em cena",
+              alt: "Crianças em estúdio de dança, expressão de concentração e alegria durante ensaio ou apresentação cênica",
+            },
+            {
+              src: "/images/ccbj-abraco.png",
+              label: "CCBJ: encontro",
+              alt: "Abraço coletivo no Centro Cultural Bom Jardim: vínculo, afeto e pertencimento entre participantes do curso de dança na periferia",
+            },
+            {
+              src: "/images/turma-estudio-02.png",
+              label: "residência coletiva",
+              alt: "Turma em estúdio durante residência artística coletiva: corpos em estado de escuta e criação compartilhada",
+            },
+          ].map(({ src, label, alt }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -296,7 +318,7 @@ export default function Pedagogia() {
             >
               <Image
                 src={src}
-                alt={label}
+                alt={alt}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />

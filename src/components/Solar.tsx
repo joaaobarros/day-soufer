@@ -8,14 +8,19 @@ function SunGraphic() {
   const rays = Array.from({ length: 16 });
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
+    <div
+      className="relative w-full h-full flex items-center justify-center"
+      role="img"
+      aria-label="Grafismo de sol radiante em movimento giratório, representando o lado solar e alegre de Day Soufer: círculo dourado central irradiando 16 raios de comprimentos alternados, com anel tracejado externo e 8 pontos orbitais"
+    >
       {/* Outer slow-rotating ring of rays */}
       <motion.div
+        aria-hidden="true"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
         className="absolute w-full h-full"
       >
-        <svg viewBox="0 0 400 400" className="w-full h-full">
+        <svg viewBox="0 0 400 400" className="w-full h-full" aria-hidden="true">
           {rays.map((_, i) => {
             const angle = (i * 360) / rays.length;
             const rad = (angle * Math.PI) / 180;
@@ -54,11 +59,12 @@ function SunGraphic() {
 
       {/* Inner counter-rotating details */}
       <motion.div
+        aria-hidden="true"
         animate={{ rotate: -360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         className="absolute w-3/4 h-3/4"
       >
-        <svg viewBox="0 0 300 300" className="w-full h-full">
+        <svg viewBox="0 0 300 300" className="w-full h-full" aria-hidden="true">
           {Array.from({ length: 8 }).map((_, i) => {
             const a = (i * 45 * Math.PI) / 180;
             const cx = 150 + 68 * Math.cos(a);
@@ -112,8 +118,8 @@ function SunGraphic() {
       </motion.div>
 
       {/* Botanical: palm frond left */}
-      <div className="absolute left-0 bottom-0 opacity-20 pointer-events-none">
-        <svg viewBox="0 0 120 200" width="120" height="200">
+      <div className="absolute left-0 bottom-0 opacity-20 pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 120 200" width="120" height="200" aria-hidden="true">
           <path
             d="M 60 200 C 40 160, 10 120, 5 80 C 15 90, 30 100, 60 200Z"
             fill="#B8860B"
@@ -135,8 +141,8 @@ function SunGraphic() {
       </div>
 
       {/* Botanical: mandacaru right */}
-      <div className="absolute right-0 top-4 opacity-15 pointer-events-none">
-        <svg viewBox="0 0 80 180" width="80" height="180">
+      <div className="absolute right-0 top-4 opacity-15 pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 80 180" width="80" height="180" aria-hidden="true">
           {/* Trunk */}
           <rect x="34" y="60" width="12" height="120" rx="6" fill="#8B6914" />
           {/* Left arm */}
@@ -176,11 +182,36 @@ function SunGraphic() {
 }
 
 const joyPhotos = [
-  { src: "/images/alegria-bicicletas.png", label: "alegria", pos: "object-center" },
-  { src: "/images/candomble-rua.png", label: "rua", pos: "object-center" },
-  { src: "/images/tutus-parede-vermelha.png", label: "bailarinas", pos: "object-top" },
-  { src: "/images/retrato-marielle.png", label: "Marielle", pos: "object-center" },
-  { src: "/images/tutus-por-do-sol.png", label: "pôr do sol", pos: "object-center" },
+  {
+    src: "/images/alegria-bicicletas.png",
+    label: "alegria",
+    alt: "Grupo de pessoas com fantasias coloridas posando com bicicletas em expressão de alegria e leveza coletiva",
+    objectPosition: "center 70%",
+  },
+  {
+    src: "/images/candomble-rua.png",
+    label: "rua",
+    alt: "Cena de candomblé na rua: espiritualidade e resistência cultural presentes no espaço público urbano",
+    objectPosition: "center 65%",
+  },
+  {
+    src: "/images/tutus-parede-vermelha.png",
+    label: "bailarinas",
+    alt: "Bailarinas com tutus brancos diante de parede vermelha vibrante, dança clássica em diálogo com cor e força",
+    objectPosition: "center 50%",
+  },
+  {
+    src: "/images/retrato-marielle.png",
+    label: "Marielle",
+    alt: "Homenagem a Marielle Franco: imagem de resistência, presença e memória de uma mulher que não será esquecida",
+    objectPosition: "center 25%",
+  },
+  {
+    src: "/images/tutus-por-do-sol.png",
+    label: "pôr do sol",
+    alt: "Silhuetas de bailarinas com tutus recortadas contra o céu em pôr do sol, beleza e poesia do corpo em dança",
+    objectPosition: "center 55%",
+  },
 ];
 
 export default function Solar() {
@@ -260,21 +291,22 @@ export default function Solar() {
 
         {/* Joy photo strip */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3">
-          {joyPhotos.map(({ src, label, pos }, i) => (
+          {joyPhotos.map(({ src, label, alt, objectPosition }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.7, delay: i * 0.1 }}
-              className={`relative overflow-hidden group ${i === 2 ? "row-span-2 md:row-span-1" : ""}`}
-              style={{ height: i === 0 || i === 4 ? "280px" : "220px" }}
+              className="relative overflow-hidden group"
+              style={{ aspectRatio: "3/2" }}
             >
               <Image
                 src={src}
-                alt={label}
+                alt={alt}
                 fill
-                className={`object-cover ${pos} transition-transform duration-700 group-hover:scale-105`}
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                style={{ objectPosition }}
               />
               {/* Warm tint overlay */}
               <div

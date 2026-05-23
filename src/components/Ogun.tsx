@@ -61,8 +61,8 @@ export default function Ogun() {
       className="relative py-32 md:py-48 px-6 md:px-12 bg-[#0A0608] overflow-hidden"
     >
       {/* Iron texture, diagonal lines */}
-      <div className="absolute inset-0 opacity-[0.025] pointer-events-none">
-        <svg width="100%" height="100%">
+      <div className="absolute inset-0 opacity-[0.025] pointer-events-none" aria-hidden="true">
+        <svg width="100%" height="100%" aria-hidden="true">
           <defs>
             <pattern
               id="iron-lines"
@@ -137,7 +137,7 @@ export default function Ogun() {
             >
               <Image
                 src="/images/ilustracao-espada.png"
-                alt="Ilustração, mulher com facão, Ogun"
+                alt="Ilustração de mulher negra segurando um facão erguido, referência ao orixá Ogun: força, abertura de caminhos e coragem"
                 fill
                 className="object-cover object-center"
               />
@@ -163,7 +163,7 @@ export default function Ogun() {
             >
               <Image
                 src="/images/porta-azul.png"
-                alt="Porta azul de terreiro"
+                alt="Porta azul de terreiro de Candomblé: detalhe arquitetônico de entrada sagrada, azul intenso como cor de proteção e passagem espiritual"
                 fill
                 className="object-cover object-top"
               />
@@ -210,6 +210,8 @@ export default function Ogun() {
                 height="24"
                 viewBox="0 0 24 24"
                 className="flex-shrink-0 text-[#8B3E2F]/40"
+                role="img"
+                aria-label="Símbolo de Ogun: cruz de ferro com quatro eixos cardinais e diagonais, representando abertura de caminhos nos quatro cantos"
               >
                 {/* Simple iron/cross motif, Ogun's symbol */}
                 <line
@@ -265,7 +267,7 @@ export default function Ogun() {
               <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-[#8B3E2F]/30">
                 <Image
                   src="/images/retrato-elekes.png"
-                  alt="Day Soufer, Irìn Omu"
+                  alt="Day Soufer usando elekes, colares sagrados do Candomblé. Irìn Omu, filha de Ogun, Ketu"
                   fill
                   className="object-cover object-top"
                 />

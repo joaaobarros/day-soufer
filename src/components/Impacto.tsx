@@ -52,10 +52,10 @@ function WaveBar({
   return (
     <div ref={ref} className="space-y-2">
       <div className="flex justify-between items-baseline">
-        <span className="text-xs text-[#C4A882]/60 tracking-wider">
+        <span className="text-sm text-[#C4A882]/80 tracking-wider">
           {label}
         </span>
-        <span className="font-editorial italic text-xs text-[#8B3E2F]/60">
+        <span className="font-editorial italic text-sm text-[#8B3E2F]/80">
           {value}%
         </span>
       </div>
@@ -105,7 +105,17 @@ function ConstellationViz() {
   ];
 
   return (
-    <svg viewBox="0 0 400 400" className="w-full max-w-md mx-auto">
+    <svg
+      viewBox="0 0 400 400"
+      className="w-full max-w-md mx-auto"
+      role="img"
+      aria-labelledby="constellation-title"
+      aria-describedby="constellation-desc"
+    >
+      <title id="constellation-title">Constelação de linguagens de Day Soufer</title>
+      <desc id="constellation-desc">
+        Diagrama de bolhas interconectadas representando as seis linguagens artísticas em diálogo na prática de Day Soufer: dança (maior, centro), capoeira (direita superior), costura (esquerda superior), pedagogia (direita inferior), pesquisa (esquerda inferior) e dramaturgia (inferior). As linhas entre as bolhas indicam conexão entre as linguagens.
+      </desc>
       {/* Connection lines */}
       {nodes.map((n, i) =>
         nodes.slice(i + 1).map((m, j) => {
@@ -195,8 +205,8 @@ export default function Impacto() {
       ref={sectionRef}
       className="relative py-32 md:py-48 bg-[#080808] overflow-hidden"
     >
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-        <svg width="100%" height="100%">
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" aria-hidden="true">
+        <svg width="100%" height="100%" aria-hidden="true">
           <defs>
             <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
               <circle cx="15" cy="15" r="0.5" fill="#C4A882" />
@@ -240,8 +250,8 @@ export default function Impacto() {
               <p className="font-display text-3xl md:text-4xl text-[#C4A882] mb-2">
                 {item.number}
               </p>
-              <p className="text-xs text-[#F5F0E8]/60 mb-1">{item.label}</p>
-              <p className="font-editorial italic text-[10px] text-[#C4A882]/30 leading-relaxed">
+              <p className="text-sm text-[#F5F0E8]/80 mb-1">{item.label}</p>
+              <p className="font-editorial italic text-xs text-[#C4A882]/60 leading-relaxed">
                 {item.sub}
               </p>
             </motion.div>
